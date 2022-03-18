@@ -10,17 +10,17 @@ const roomSchema = new Schema({
         
     noOfguests:{
         type:Number,
-        required:true
+       required:true
     },
     
     roomtype:{
         type:String,
-        required:true,
+       required:true,
     },
 
     facilities:{
         type:String,
-        required:true,
+       required:true,
     },
     
     rentperday:{
