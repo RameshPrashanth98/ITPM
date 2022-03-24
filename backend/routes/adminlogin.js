@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const adminlogin = require("../models/adminlogin");
 const Adminlogin = require("../models/adminlogin");
 
 
@@ -29,6 +30,7 @@ router.route("/retrieve").get((req,res)=>{
         console.log(err)
     })
 }) 
+
 //update admin details
 router.route("/update/:id").put(async(req,res)=>{
     let Admin_id = req.params.id;
@@ -58,17 +60,18 @@ router.route("/delete/:id").delete(async(req,res)=>{
 
     })
 })
-/*
+
 //get one admin
+/*
 router.route("/get/:id").get(async(req,res)=>{
     let Admin_id = req.params.id;
-    Employees.findById(Admin_id).then((adminlogin)=>{
+    adminlogin.findById(Admin_id).then((adminlogin)=>{
         res.json(adminlogin)
     }).catch(()=>{
         console.log(err.message);
         res.status(500).send({status: "Error with get admin details", error: err.message});
     })
-})*/
-
+})
+*/
 
 module.exports = router;
