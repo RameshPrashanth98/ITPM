@@ -82,7 +82,7 @@ router.route("/delete/:id").delete(async(req,res)=>{
 router.route("/get/:id").get(async(req,res)=>{
     let Emp_id = req.params.id;
     Employees.findById(Emp_id).then((employees)=>{
-        res.json(barInventory)
+        res.json(employees)
     }).catch(()=>{
         console.log(err.message);
         res.status(500).send({status: "Error with get employee details", error: err.message});

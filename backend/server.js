@@ -42,3 +42,5 @@ const employeesRouter = require('./routes/employees.js');
 app.use('/employees',employeesRouter);
 const paidsalariesRouter = require('./routes/paidsalaries.js');
 app.use('/paidsalaries',paidsalariesRouter);
+const adminloginRouter = require('./routes/adminlogin.js');
+app.use('/adminlogin',adminloginRouter);
